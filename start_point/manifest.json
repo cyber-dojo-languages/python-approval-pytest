@@ -1,0 +1,13 @@
+{
+  "display_name": "Python, approval",
+  "image_name": "cyberdojofoundation/python_approval",
+  "visible_filenames":
+  [
+    "hiker.py",
+    "test_hiker.py",
+    "cyber-dojo.sh"
+  ],
+  "filename_extension": [ ".py" ],
+  "max_seconds": 10,
+  "tab_size": 4
+}
