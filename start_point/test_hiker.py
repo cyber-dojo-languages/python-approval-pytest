@@ -4,4 +4,4 @@ from approvaltests.approvals import verify
 def test_simple():
     '''a simple example to start you off'''
     douglas = hiker.Hiker()
-    verify(douglas.answer())
+    verify(str(douglas.answer()))
