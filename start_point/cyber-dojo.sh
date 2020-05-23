@@ -21,4 +21,7 @@ function delete_dirs()
 }
 
 # ------------------------------------------------------------------------
+# https://github.com/approvals/ApprovalTests.Python
+# https://approvaltests.com/
+
 pytest --approvaltests-use-reporter='PythonNative'

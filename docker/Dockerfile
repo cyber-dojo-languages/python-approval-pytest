@@ -13,6 +13,8 @@ RUN apt-get update && apt-get install --yes coreutils bash tar file
 
 LABEL maintainer=jon@jaggersoft.com
 
+# https://github.com/approvals/ApprovalTests.Python
+
 RUN pip3 install --upgrade pytest-approvaltests
 
 COPY red_amber_green.rb /usr/local/bin
