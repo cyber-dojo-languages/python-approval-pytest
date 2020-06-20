@@ -6,7 +6,8 @@
     "hiker.py",
     "test_hiker.py",
     "cyber-dojo.sh",
-    "test_hiker.test_hhgttg.approved.txt"
+    "test_hiker.test_global.approved.txt",
+    "test_hiker.test_instance.approved.txt"
   ],
   "filename_extension": [ ".py", ".approved.txt", ".received.txt" ],
   "max_seconds": 10,

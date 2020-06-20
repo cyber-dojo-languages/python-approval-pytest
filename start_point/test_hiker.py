@@ -1,8 +1,12 @@
 import hiker
 from approvaltests.approvals import verify
 
-def test_hhgttg():
-    '''a simple example to start you off'''
-    douglas = hiker.Hiker()
-    result = str(douglas.answer())
+from hiker import global_answer, Hiker
+
+def test_global():
+    result = str(global_answer())
+    verify(result)
+
+def test_instance():
+    result = str(Hiker().instance_answer())
     verify(result)
