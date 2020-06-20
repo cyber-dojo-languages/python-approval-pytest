@@ -1,7 +1,6 @@
-import hiker
+from hiker import global_answer, Hiker
 from approvaltests.approvals import verify
 
-from hiker import global_answer, Hiker
 
 def test_global():
     result = str(global_answer())
