@@ -1,4 +1,4 @@
-FROM cyberdojofoundation/python_pytest:2b04bec
+FROM cyberdojofoundation/python_pytest:40b77a9
 LABEL maintainer=jon@jaggersoft.com
 
 # https://github.com/approvals/ApprovalTests.Python
