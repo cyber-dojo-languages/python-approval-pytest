@@ -12,7 +12,7 @@ readonly PYTEST_APPROVALS_EXPECTED="pytest-approvaltests-0.2.4"
 # to find the current versions of approvaltests and pytest-approvaltests
 readonly PLUGINS=$((docker run --rm -i ${IMAGE_NAME} sh -c 'pytest --version --version') | grep 'approvaltests')
 
-APPROVALTESTS_REGEX="approvaltests-[0-9\.]*"
+APPROVALTESTS_REGEX=" approvaltests-[0-9\.]*"
 PYTEST_APPROVALS_REGEX="pytest-approvaltests-[0-9\.]*"
 [[ ${PLUGINS} =~ ${APPROVALTESTS_REGEX} ]]
 readonly APPROVALTESTS_ACTUAL="${BASH_REMATCH[*]}"
