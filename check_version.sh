@@ -11,7 +11,7 @@ readonly APPROVALTESTS_EXPECTED="approvaltests-15.3.2"
 readonly PYTEST_APPROVALS_EXPECTED="pytest-approvaltests-0.2.4"
 # 'pytest --version --version' returns the plugins used by pytest - we can then use this
 # to find the current versions of approvaltests and pytest-approvaltests
-readonly PLUGINS=$((docker run --rm -i ${IMAGE_NAME} sh -c 'pytest --version --version') | grep 'approvaltests')
+readonly PLUGINS=$(docker run --rm -i ${IMAGE_NAME} sh -c 'pytest --version --version' | grep 'approvaltests')
 
 APPROVALTESTS_REGEX=" approvaltests-[0-9\.]*"
 PYTEST_APPROVALS_REGEX="pytest-approvaltests-[0-9\.]*"
