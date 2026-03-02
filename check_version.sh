@@ -7,13 +7,13 @@ readonly JSON=`cat docker/image_name.json`
 readonly IMAGE_NAME="${BASH_REMATCH[1]}"
 
 readonly MY_DIR="$( cd "$( dirname "${0}" )" && pwd )"
-readonly APPROVALTESTS_EXPECTED="approvaltests-17.1.1"
+readonly APPROVALTESTS_EXPECTED="approvaltests-17.2.1"
 readonly PYTEST_APPROVALS_EXPECTED="pytest-approvaltests-0.2.4"
 # 'pytest --version --version' returns the plugins used by pytest - we can then use this
 # to find the current versions of approvaltests and pytest-approvaltests
 readonly PLUGINS=$(docker run --rm -i ${IMAGE_NAME} sh -c 'pytest --version --version' | grep 'approvaltests')
 
-APPROVALTESTS_REGEX=" approvaltests-[0-9\.]*"
+APPROVALTESTS_REGEX="approvaltests-[0-9\.]*"
 PYTEST_APPROVALS_REGEX="pytest-approvaltests-[0-9\.]*"
 [[ ${PLUGINS} =~ ${APPROVALTESTS_REGEX} ]]
 readonly APPROVALTESTS_ACTUAL="${BASH_REMATCH[*]}"
