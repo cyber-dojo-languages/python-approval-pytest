@@ -7,7 +7,7 @@ readonly JSON=`cat docker/image_name.json`
 readonly IMAGE_NAME="${BASH_REMATCH[1]}"
 
 readonly MY_DIR="$( cd "$( dirname "${0}" )" && pwd )"
-readonly PYTEST_APPROVALS_EXPECTED="pytest-approvaltests-0.2.4"
+readonly PYTEST_APPROVALS_EXPECTED="pytest-approvaltests-0.2"
 readonly PLUGINS=$(docker run --rm -i ${IMAGE_NAME} sh -c 'pytest --version --version' | grep 'approvaltests')
 
 PYTEST_APPROVALS_REGEX="pytest-approvaltests-[0-9\.]*"
