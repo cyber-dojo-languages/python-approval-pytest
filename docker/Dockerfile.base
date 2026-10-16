@@ -1,4 +1,4 @@
-FROM ghcr.io/cyber-dojo-languages/python_pytest:788feb4
+FROM ghcr.io/cyber-dojo-languages/python_pytest:a7dde62
 LABEL maintainer=jon@jaggersoft.com
 
 # https://github.com/approvals/ApprovalTests.Python
@@ -11,3 +11,6 @@ RUN pip3 install --upgrade pytest-approvaltests
 # sandbox, which is empty at the start of every run.
 COPY warm_mypy_cache.sh .
 RUN bash ./warm_mypy_cache.sh && rm ./warm_mypy_cache.sh
+
+COPY install.sh .
+RUN ./install.sh && rm ./install.sh
