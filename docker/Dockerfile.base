@@ -1,4 +1,4 @@
-FROM ghcr.io/cyber-dojo-languages/python_pytest:a7dde62
+FROM ghcr.io/cyber-dojo-languages/python_pytest:000496f@sha256:84db0d412b98555c005ab6e50c7a269fcbc1a976ba4ef06b0e05baeb1812ae52
 LABEL maintainer=jon@jaggersoft.com
 
 # https://github.com/approvals/ApprovalTests.Python
